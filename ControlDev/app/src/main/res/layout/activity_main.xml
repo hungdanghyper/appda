@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="xoapit.controldev.MainActivity">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đồ Án LTHT - Vi Điều Khiển"
+            android:padding="20dp"
+            android:paddingBottom="60dp"
+            android:paddingTop="60dp"
+            android:textStyle="bold"
+            android:background="#2980b9"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:fontFamily="sans-serif"
+            android:textSize="@dimen/abc_dialog_padding_material" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn1"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="#27ae60"
+                android:onClick="btn1_OnClick"
+                android:text="D01 OFF"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+                android:textColor="#ffffff"
+                android:layout_marginTop="48dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true" />
+
+            <Button
+                android:id="@+id/btn2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="#27ae60"
+                android:onClick="btn2_OnClick"
+                android:text="D02 OFF"
+                android:textStyle="bold"
+                android:layout_marginRight="20dp"
+                android:textColor="#ffffff"
+                android:layout_alignTop="@+id/btn1"
+                android:layout_alignParentEnd="true" />
+
+            <Button
+                android:id="@+id/btn3"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="#27ae60"
+                android:onClick="btn3_OnClick"
+                android:text="D03 OFF"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:layout_above="@+id/btnOffAll"
+                android:layout_alignStart="@+id/btn1" />
+
+            <Button
+                android:id="@+id/btn4"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="#27ae60"
+                android:onClick="btn4_OnClick"
+                android:text="D04 OFF"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:layout_marginTop="29dp"
+                android:layout_below="@+id/btn2"
+                android:layout_alignStart="@+id/btn2" />
+
+            <Button
+                android:id="@+id/btnOffAll"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/btn4"
+                android:layout_alignStart="@+id/btn4"
+                android:layout_below="@+id/btn4"
+                android:layout_marginStart="-77dp"
+                android:layout_marginTop="52dp"
+                android:background="#333"
+                android:onClick="btn_OffAll_OnClick"
+                android:padding="15dp"
+                android:text="OFF ALL"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnOnAll"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/btn3"
+                android:layout_alignStart="@+id/btn3"
+                android:layout_alignTop="@+id/btnOffAll"
+                android:layout_marginEnd="-67dp"
+                android:background="#2980b9"
+                android:onClick="btn_OnAll_OnClick"
+                android:padding="15dp"
+                android:text="ON ALL"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="LIGHT"
+                android:id="@+id/textView7"
+                android:layout_above="@+id/btn2"
+                android:layout_alignStart="@+id/btn1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="FAN"
+                android:id="@+id/textView8"
+                android:layout_above="@+id/btn2"
+                android:layout_alignStart="@+id/btn2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="MOTOR"
+                android:id="@+id/textView9"
+                android:layout_above="@+id/btn3"
+                android:layout_alignStart="@+id/btn3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="KETTLES"
+                android:id="@+id/textView10"
+                android:layout_alignTop="@+id/textView9"
+                android:layout_alignStart="@+id/btn4" />
+
+            <LinearLayout
+                android:background="#2c3e50"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="4"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp">
+                <Button
+                    android:id="@+id/btnRefresh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="btn_Refresh_OnClick"
+                    android:text="Refresh"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_weight="1"
+                    android:background="#2ecc71"
+                    android:textColor="#ffffff"
+                    />
+                <Button
+                    android:id="@+id/btn_Option"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="btn_Option_OnClick"
+                    android:text="Option"
+                    android:layout_weight="1"
+                    android:background="#d35400"
+                    android:textColor="#ffffff"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="About"
+                    android:id="@+id/btnAbout"
+                    android:background="#3498db"
+                    android:textColor="#ffffff"
+                    android:onClick="btn_About_OnClick"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Logout"
+                    android:layout_weight="1"
+                    android:onClick="btn_Logout_OnClick"
+                    android:id="@+id/btnLogout"
+                    android:background="#c0392b"
+                    android:textColor="#ffffff"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginLeft="4dp"/>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+</LinearLayout>
